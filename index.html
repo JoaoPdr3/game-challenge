@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca</title>
+    <link rel="shortcut icon" href="img/jogo-da-forca.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="inicio">
+        <h1>JOGO DA FORCA</h1>
+    </header>
+    <main>
+        <section id="regras">
+            <h2>Regras:</h2>
+            <ol>
+                <li>Não escolha a mesma letra.</li>
+                <li>Você pode adicionar palavras ao jogo.</li>
+                <li>Você tem apenas 6 tentativas.</li>
+            </ol>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <label for=".config">Adicione uma palavra:</label>
+            <input type="text" placeholder="Adicionar uma palavra..." id="nova-palavra">
+            <span>*Permitido apenas letras maiúsculas.</span>
+            <input type="button" value="Adicionar Palavra" id="btn-adc-palavra" class="config">
+        </section>
+        
+        <section id="jogo">
+            <div>
+                <h2>Vamos começar!</h2>
+                <a href="#tabuleiro-forca" id="btn-jogar"><button class="btn">Jogar</button></a>
+            </div>
+            <div id="tabuleiro-forca">
+                <canvas width=450px" height="380px" id="tabuleiro"></canvas>
+            </div>
+            <div id="palavra-secreta">
+            </div>
+            <div class="letras-incorretas">
+            </div>
+            <div id="mensagem">
+                <p id="msg"></p>
+            </div>
+            <div class="letras">
+                <button id="tecla-A" onclick="letraIdentificada('A')">A</button>
+                <button id="tecla-B" onclick="letraIdentificada('B')">B</button>
+                <button id="tecla-C" onclick="letraIdentificada('C')">C</button>
+                <button id="tecla-D" onclick="letraIdentificada('D')">D</button>
+                <button id="tecla-E" onclick="letraIdentificada('E')">E</button>
+                <button id="tecla-F" onclick="letraIdentificada('F')">F</button>
+                <button id="tecla-G" onclick="letraIdentificada('G')">G</button>
+                <button id="tecla-H" onclick="letraIdentificada('H')">H</button>
+                <button id="tecla-I" onclick="letraIdentificada('I')">I</button>
+                <br>
+                <button id="tecla-J" onclick="letraIdentificada('J')">J</button>
+                <button id="tecla-K" onclick="letraIdentificada('K')">K</button>
+                <button id="tecla-L" onclick="letraIdentificada('L')">L</button>
+                <button id="tecla-M" onclick="letraIdentificada('M')">M</button>
+                <button id="tecla-N" onclick="letraIdentificada('N')">N</button>
+                <button id="tecla-O" onclick="letraIdentificada('O')">O</button>
+                <button id="tecla-P" onclick="letraIdentificada('P')">P</button>
+                <button id="tecla-Q" onclick="letraIdentificada('Q')">Q</button>
+                <button id="tecla-R" onclick="letraIdentificada('R')">R</button>
+                <br>
+                <button id="tecla-S" onclick="letraIdentificada('S')">S</button>
+                <button id="tecla-T" onclick="letraIdentificada('T')">T</button>
+                <button id="tecla-U" onclick="letraIdentificada('U')">U</button>
+                <button id="tecla-V" onclick="letraIdentificada('V')">V</button>
+                <button id="tecla-W" onclick="letraIdentificada('W')">W</button>
+                <button id="tecla-X" onclick="letraIdentificada('X')">X</button>
+                <button id="tecla-Y" onclick="letraIdentificada('Y')">Y</button>
+                <button id="tecla-Z" onclick="letraIdentificada('Z')">Z</button>
+                <br>    
+            </div>
+            <div>
+                <a href="#inicio" id="btn-novamente"><button class="btn">Tente novamente!</button></a>
+            </div>    
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Desenvolvido por JoaoM0 | 2022</p>
+        <a href="https://github.com/Joao-M0" target="_blank"><img src="img/github.png" alt="Logo do Github"></a>
+        <a href="#"><img src="img/linkedin.png" alt="Logo do Linkedin"></a>
+    </footer>
+    <script src="js/canvas.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/botoes.js"></script>
+</body>
+</html>

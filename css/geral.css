@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+}
+
+header {
+  padding-top: 30px;
+  padding-left: 60px;
+}
+
+main {
+  margin: 35px auto;
+  width: 90%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}

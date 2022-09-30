@@ -1,0 +1,118 @@
+/* Default Classes on Pages */
+.btn {
+  padding: 16px 40px;
+  border-radius: 2px;
+  overflow: hidden;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
+  color: white;
+}
+
+.bg-btn {
+  background-color: white;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  background: linear-gradient(45deg, rgba(59, 174, 227, 0.486) 0%, rgba(87, 111, 230, 0.459) 25%, rgba(152, 68, 183, 0.479) 51%, rgba(255, 53, 127, 0.637) 100%);
+  transition: transform .2s;
+}
+
+.bg-btn:hover {
+  transform: translateY(2px);
+  padding-bottom: 18px;
+}
+
+.bg-btn:active {
+  transform: translateY(3px);
+  padding-bottom: 14px;
+}
+
+.btn-orig {
+  padding: 13px 0;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: none;
+  background-color: #161616;
+  color: white;
+  font-size: 16px;
+  transition: background 500ms;
+}
+
+.btn-orig:hover {
+  background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
+}
+
+.border-btn {
+  background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
+  padding: 1px;
+  border-radius: 2px;
+}
+
+/* ||INDEX */
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 29px;
+}
+
+/* ||GAME */
+
+/* Without Css */
+
+/* ||ADD-WORD */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.text-container textarea {
+  padding: 5px;
+  height: 200px;
+  font-size: 24px;
+  color: #ff84b1dc;
+  background-color: #161616;
+  resize: none;
+  border: none;
+  font-weight: 300;
+}
+
+.text-container textarea::placeholder {
+  color: #ff84b1dc;
+}
+
+.text-container .info {
+  color: #ff84b1dc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.text-container div {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-container .border-btn,
+.text-container .border-btn .btn-orig {
+  width: 100%;
+}
+
+.text-container .bg-btn {
+  padding: 0;
+  transition: transform 200ms;
+}
+
+.text-container .bg-btn:hover {
+  transform: translateY(-5px);
+  padding: 0;
+}
+
+.text-container .bg-btn:active {
+  transform: translateY(5px);
+  padding: 0;
+}

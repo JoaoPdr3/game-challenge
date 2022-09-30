@@ -1,8 +1,0 @@
-@import url(../styles/buttons.css);
-
-div {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 29px;
-}

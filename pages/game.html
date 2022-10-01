@@ -14,15 +14,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
   <!-- *Scripts* -->
+  <script src="../scripts/board.js" defer></script>
 
 <body>
   <header>
-    <img src="../assets/logo-alura.svg" alt="Logo da Alura.">
+    <a href="../index.html">
+      <img src="../assets/logo-alura.svg" alt="Logo da Alura.">
+    </a>
   </header>
-  <main>
+  <main class="content-game">
     <div class="game-container">
       <div class="game-screen">
-        <canvas>
+        <canvas id="canvas">
         </canvas>
       </div>
       <div class="word">
@@ -34,31 +37,40 @@
       </div>
     </div>
     <div class="keyboard">
-      <button class="letter-btn" id="" type="button">A</button>
-      <button class="letter-btn" id="" type="button">B</button>
-      <button class="letter-btn" id="" type="button">C</button>
-      <button class="letter-btn" id="" type="button">D</button>
-      <button class="letter-btn" id="" type="button">E</button>
-      <button class="letter-btn" id="" type="button">F</button>
-      <button class="letter-btn" id="" type="button">G</button>
-      <button class="letter-btn" id="" type="button">H</button>
-      <button class="letter-btn" id="" type="button">I</button>
-      <button class="letter-btn" id="" type="button">J</button>
-      <button class="letter-btn" id="" type="button">K</button>
-      <button class="letter-btn" id="" type="button">L</button>
-      <button class="letter-btn" id="" type="button">M</button>
-      <button class="letter-btn" id="" type="button">N</button>
-      <button class="letter-btn" id="" type="button">O</button>
-      <button class="letter-btn" id="" type="button">P</button>
-      <button class="letter-btn" id="" type="button">Q</button>
-      <button class="letter-btn" id="" type="button">S</button>
-      <button class="letter-btn" id="" type="button">T</button>
-      <button class="letter-btn" id="" type="button">U</button>
-      <button class="letter-btn" id="" type="button">V</button>
-      <button class="letter-btn" id="" type="button">W</button>
-      <button class="letter-btn" id="" type="button">X</button>
-      <button class="letter-btn" id="" type="button">Y</button>
-      <button class="letter-btn" id="" type="button">Z</button>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">A</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">B</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">C</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">D</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">E</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">F</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">G</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">H</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">I</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">J</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">K</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">L</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">M</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">N</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">O</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">P</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">Q</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">R</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">S</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">T</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">U</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">V</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">W</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">X</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">Y</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="" type="button">Z</button></span>
+    </div>
+    <div class="buttons">
+      <span class="border-btn">
+        <button class="btn-orig">Recomeçar</button>
+      </span>
+      <span class="bg-btn">
+        <a class="btn" href="../index.html">Desistir</a>
+      </span>
     </div>
   </main>
 </body>

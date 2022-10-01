@@ -56,8 +56,34 @@
 }
 
 /* ||GAME */
+.game-container * {
+  background-color: #161616;
+}
 
-/* Without Css */
+.game-container {
+  width: 500px;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.game-container .game-screen {
+  height: 90%;
+}
+
+.game-container .word {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.game-container .letter {
+  font-size: 20px;
+  color: #ff84b1dc;
+  width: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff84b1dc;
+}
 
 /* ||ADD-WORD */
 .text-container {

@@ -152,6 +152,21 @@
   padding: 0;
 }
 
+span.game-situation {
+  position: fixed;
+  top: 50px;
+  left: 450px;
+  background-color: #b485f1d8;
+  height: 100px;
+  padding: 10px 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0px 4px 0px #934dee;
+  color: white;
+}
+
 /* ||ADD-WORD */
 .text-container {
   display: flex;

@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <!-- *Scripts* -->
+  <script type="module" src="../scripts/addWord.js" defer></script>
 </head>
 
 <body>
@@ -25,17 +26,14 @@
   </header>
   <main>
     <div class="text-container">
-      <textarea name="textarea" id="textarea" cols="30" rows="10" maxlength="9"
-        placeholder="Digite uma palavra"></textarea>
+      <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Digite uma palavra"></textarea>
       <span class="info">
         <img src="../assets/info.svg" alt="Ícone de Informação.">
-        Máx. de 8 letras.
+        Máx. de 6 letras.
       </span>
       <div>
         <span class="border-btn">
-          <a href="game.html">
-            <button class="btn-orig" type="button">Adicionar e Jogar</button>
-          </a>
+          <button id="btn-add-word" class="btn-orig" type="button">Adicionar e Jogar</button>
         </span>
         <span class="bg-btn">
           <a class="btn" href="../index.html">Cancelar</a>

@@ -15,13 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <!-- *Scripts* -->
   <script src="../scripts/board.js" defer></script>
-  <script src="../scripts/main.js" defer></script>
+  <script type="module" src="../scripts/main.js" defer></script>
 </head>
 
 <body>
   <span class="game-situation">
-    <!-- Parabéns! Você acertou a palavra {palavra}. -->
-    <!-- Tente novamente! A palavra certa é {palavra}. -->
   </span>
   <header>
     <a href="../index.html">
@@ -30,10 +28,8 @@
   </header>
   <main class="content-game">
     <div class="game-container">
-      <div class="game-screen">
-        <canvas id="canvas">
-        </canvas>
-      </div>
+      <canvas id="canvas" width="350px" height="280">
+      </canvas>
       <div class="word">
       </div>
     </div>

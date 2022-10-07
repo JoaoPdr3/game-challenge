@@ -2,102 +2,104 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo | Alura</title>
-    <!-- *Styles* -->
-    <link rel="stylesheet" href="../css/geral.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- *Fonts* -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- *Scripts* -->
-    <script src="../scripts/board.js" defer></script>
-    <script src="../scripts/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo | Alura</title>
+  <!-- *Styles* -->
+  <link rel="stylesheet" href="../css/geral.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <!-- *Fonts* -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- *Scripts* -->
+  <script src="../scripts/board.js" defer></script>
+  <script src="../scripts/main.js" defer></script>
 </head>
 
 <body>
-    <span class="game-situation">
-        Parabéns! Você acertou a palavra: {palavra}.
-    </span>
-    <header>
-        <a href="../index.html">
-            <img src="../assets/logo-alura.svg" alt="Logo da Alura.">
-        </a>
-    </header>
-    <main class="content-game">
-        <div class="game-container">
-            <div class="game-screen">
-                <canvas id="canvas">
-                </canvas>
-            </div>
-            <div class="word">
-            </div>
-        </div>
-        <div class="keyboard">
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-A" type="button"
-                    onclick="identifiesLetter('A')">A</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-B" type="button"
-                    onclick="identifiesLetter('B')">B</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-C" type="button"
-                    onclick="identifiesLetter('C')">C</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-D" type="button"
-                    onclick="identifiesLetter('D')">D</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-E" type="button"
-                    onclick="identifiesLetter('E')">E</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-F" type="button"
-                    onclick="identifiesLetter('F')">F</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-G" type="button"
-                    onclick="identifiesLetter('G')">G</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-H" type="button"
-                    onclick="identifiesLetter('H')">H</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-I" type="button"
-                    onclick="identifiesLetter('I')">I</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-J" type="button"
-                    onclick="identifiesLetter('J')">J</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-K" type="button"
-                    onclick="identifiesLetter('K')">K</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-L" type="button"
-                    onclick="identifiesLetter('L')">L</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-M" type="button"
-                    onclick="identifiesLetter('M')">M</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-N" type="button"
-                    onclick="identifiesLetter('N')">N</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-O" type="button"
-                    onclick="identifiesLetter('O')">O</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-P" type="button"
-                    onclick="identifiesLetter('P')">P</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-Q" type="button"
-                    onclick="identifiesLetter('Q')">Q</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-R" type="button"
-                    onclick="identifiesLetter('R')">R</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-S" type="button"
-                    onclick="identifiesLetter('S')">S</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-T" type="button"
-                    onclick="identifiesLetter('T')">T</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-U" type="button"
-                    onclick="identifiesLetter('U')">U</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-V" type="button"
-                    onclick="identifiesLetter('V')">V</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-W" type="button"
-                    onclick="identifiesLetter('W')">W</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-X" type="button"
-                    onclick="identifiesLetter('X')">X</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-Y" type="button"
-                    onclick="identifiesLetter('Y')">Y</button></span>
-            <span class="border-btn"><button class="letter-btn btn-orig" id="key-Z" type="button"
-                    onclick="identifiesLetter('Z')">Z</button></span>
-        </div>
-        <div class="buttons">
-            <span class="border-btn">
-                <button class="btn-orig" id="btn-restart">Recomeçar</button>
-            </span>
-            <span class="bg-btn">
-                <a class="btn" href="../index.html">Desistir</a>
-            </span>
-        </div>
-    </main>
+  <span class="game-situation">
+    <!-- Parabéns! Você acertou a palavra {palavra}. -->
+    <!-- Tente novamente! A palavra certa é {palavra}. -->
+  </span>
+  <header>
+    <a href="../index.html">
+      <img src="../assets/logo-alura.svg" alt="Logo da Alura.">
+    </a>
+  </header>
+  <main class="content-game">
+    <div class="game-container">
+      <div class="game-screen">
+        <canvas id="canvas">
+        </canvas>
+      </div>
+      <div class="word">
+      </div>
+    </div>
+    <div class="keyboard">
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-A" type="button"
+          onclick="identifiesLetter('A')">A</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-B" type="button"
+          onclick="identifiesLetter('B')">B</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-C" type="button"
+          onclick="identifiesLetter('C')">C</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-D" type="button"
+          onclick="identifiesLetter('D')">D</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-E" type="button"
+          onclick="identifiesLetter('E')">E</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-F" type="button"
+          onclick="identifiesLetter('F')">F</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-G" type="button"
+          onclick="identifiesLetter('G')">G</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-H" type="button"
+          onclick="identifiesLetter('H')">H</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-I" type="button"
+          onclick="identifiesLetter('I')">I</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-J" type="button"
+          onclick="identifiesLetter('J')">J</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-K" type="button"
+          onclick="identifiesLetter('K')">K</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-L" type="button"
+          onclick="identifiesLetter('L')">L</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-M" type="button"
+          onclick="identifiesLetter('M')">M</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-N" type="button"
+          onclick="identifiesLetter('N')">N</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-O" type="button"
+          onclick="identifiesLetter('O')">O</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-P" type="button"
+          onclick="identifiesLetter('P')">P</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-Q" type="button"
+          onclick="identifiesLetter('Q')">Q</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-R" type="button"
+          onclick="identifiesLetter('R')">R</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-S" type="button"
+          onclick="identifiesLetter('S')">S</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-T" type="button"
+          onclick="identifiesLetter('T')">T</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-U" type="button"
+          onclick="identifiesLetter('U')">U</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-V" type="button"
+          onclick="identifiesLetter('V')">V</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-W" type="button"
+          onclick="identifiesLetter('W')">W</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-X" type="button"
+          onclick="identifiesLetter('X')">X</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-Y" type="button"
+          onclick="identifiesLetter('Y')">Y</button></span>
+      <span class="border-btn"><button class="letter-btn btn-orig" id="key-Z" type="button"
+          onclick="identifiesLetter('Z')">Z</button></span>
+    </div>
+    <div class="buttons">
+      <span class="border-btn">
+        <button class="btn-orig" id="btn-restart">Recomeçar</button>
+      </span>
+      <span class="bg-btn">
+        <a class="btn" href="../index.html">Desistir</a>
+      </span>
+    </div>
+  </main>
 </body>
 
 </html>

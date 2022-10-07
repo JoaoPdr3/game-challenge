@@ -4,6 +4,7 @@ header img {
 
 .menu .bg-btn,
 .game-situation,
+.game-container,
 .text-container textarea {
   animation: top .7s .3s backwards;
 }
@@ -17,8 +18,6 @@ header img {
   animation: bottom .7s .4s backwards;
 }
 
-.game-screen,
-.word,
 .buttons .border-btn,
 .text-container .border-btn {
   animation: left .7s .4s backwards;

@@ -1,0 +1,78 @@
+header img {
+  animation: left .7s .3s backwards;
+}
+
+.menu .bg-btn,
+.game-situation,
+.text-container textarea {
+  animation: top .7s .3s backwards;
+}
+
+.text-container .info {
+  animation: top .6s .4s backwards;
+}
+
+.menu .bg-btn:nth-child(2),
+.keyboard {
+  animation: bottom .7s .4s backwards;
+}
+
+.game-screen,
+.word,
+.buttons .border-btn,
+.text-container .border-btn {
+  animation: left .7s .4s backwards;
+}
+
+.buttons .bg-btn,
+.text-container .bg-btn {
+  animation: right .7s .4s backwards;
+}
+
+@keyframes top {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

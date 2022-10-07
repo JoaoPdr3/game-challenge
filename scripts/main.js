@@ -1,11 +1,9 @@
-import listOfWords from "./listWords.js";
-
 // Seleciona elementos;
 const btnRestart = document.getElementById("btn-restart");
 const gameWarning = document.querySelector(".game-situation");
 
 // Varáveis Globais;
-let wordsList = listOfWords;
+let wordsList = listWords();
 let lettersList = [];
 let lettersWordList = [];
 let selectWord;
@@ -156,7 +154,6 @@ function compareLetterOfWord(letter) {
     guessedWord();
   }
 }
-
 
 // Essa função é chamada quando clicado em alguma tecla, então a letra é identificada e feita a comparação para ver se a letra está certa e se for certa será mostrada no campo;
 function identifiesLetter(letter) {

@@ -1,5 +1,3 @@
-import listOfWords from "./listWords.js";
-
 const btnAdd = document.getElementById("btn-add-word");
 const pageWarning = document.querySelector(".info-page");
 const textArea = document.getElementById("textarea");
@@ -13,7 +11,7 @@ function checkWord() {
     } else if (!regEx.test(textArea.value)) {
       showWarning("Digite uma palavra válida.");
     } else {
-      listOfWords.push(textArea.value);
+      listWords().push(textArea.value);
       showWarning("A palavra foi adicionada com sucesso.");
 
       setTimeout(() => {
@@ -33,7 +31,6 @@ function showWarning(text) {
     pageWarning.style.display = "none";
   }, 4000);
 }
-
 
 btnAdd.addEventListener("click", function () {
   checkWord();

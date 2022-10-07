@@ -115,6 +115,12 @@
   padding: 4px 0;
 }
 
+.keyboard .letter-btn:disabled {
+  background-color: rgba(82, 82, 82, 0.74);
+  color: rgb(212, 212, 212);
+  pointer-events: none;
+}
+
 .buttons {
   display: flex;
   gap: 10px;
@@ -154,13 +160,15 @@
 
 span.game-situation {
   position: fixed;
-  top: 50px;
+  top: 30px;
   left: 450px;
   background-color: #b485f1d8;
-  height: 100px;
-  padding: 10px 30px;
+  width: 450px;
+  padding: 13px 30px;
+  align-items: center;
+  display: none;
   text-align: center;
-  display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 3px;
   box-shadow: 0px 4px 0px #934dee;
@@ -199,15 +207,26 @@ span.game-situation {
 }
 
 .text-container div {
-  margin-top: 25px;
+  width: 500px;
+  margin: 25px auto 0 auto;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .text-container .border-btn,
-.text-container .border-btn .btn-orig {
+.text-container .btn-orig,
+.text-container .bg-btn {
   width: 100%;
+}
+
+.text-container .btn-orig {
+  padding: 15px;
+}
+
+.text-container .btn {
+  display: block;
+  text-align: center;
 }
 
 .text-container .bg-btn {

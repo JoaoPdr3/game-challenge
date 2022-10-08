@@ -1,15 +1,12 @@
-// Seleciona elementos;
 const btnRestart = document.getElementById("btn-restart");
-const gameWarning = document.querySelector(".game-situation");
+const alertPage = document.querySelector(".alert");
 
-// Varáveis Globais;
 let wordsList = listWords();
 let lettersList = [];
 let lettersWordList = [];
 let selectWord;
-let attempts = 6;
+let attempts = 8;
 
-// Gerar palavra aleatória de acordo com número gerado pela função Math.random();
 function randomWord() {
   let randomNumb = Math.floor(Math.random() * wordsList.length);
   selectWord = wordsList[randomNumb].toUpperCase();
@@ -17,58 +14,68 @@ function randomWord() {
   lettersWordList = selectWord.split('');
 }
 
-// Essa função mostra quantos caracteres a palavra tem caso lista de letras não tiver sido definada, caso já possua só irá atualizar a lista;
 function showWord() {
-  let divWord = document.querySelector("div.word");
-  divWord.innerHTML = "";
+  const word = document.querySelector(".word");
+  word.innerHTML = "";
 
   for (let i = 0; i < lettersWordList.length; i++) {
     if (lettersList[i] == undefined) {
-      lettersList[i] = "&nbsp;"
-      divWord.innerHTML = divWord.innerHTML + "<span class='letter'>" + lettersList[i] + "</span>";
+      lettersList[i] = "&nbsp;";
+      word.innerHTML = word.innerHTML + "<span class='letter'>" + lettersList[i] + "</span>";
     } else {
-      divWord.innerHTML = divWord.innerHTML + "<span class='letter'>" + lettersList[i] + "</span>";
+      word.innerHTML = word.innerHTML + "<span class='letter'>" + lettersList[i] + "</span>";
     }
   }
 }
 
-function showBoard() {
+
+function gameAttempts() {
+  const elements = document.getElementsByClassName("heart");
+
   switch (attempts) {
+    case 7:
+      elements[7].innerHTML = "&nbsp;";
+      break;
+    case 6:
+      elements[6].innerHTML = "&nbsp;";
+      break;
     case 5:
-      showHead();
+      elements[5].innerHTML = "&nbsp;";
       break;
     case 4:
-      showBody();
+      elements[4].innerHTML = "&nbsp;";
       break;
     case 3:
-      showLeftArm();
+      elements[3].innerHTML = "&nbsp;";
       break;
     case 2:
-      showRightArm();
+      elements[2].innerHTML = "&nbsp;";
       break;
     case 1:
-      showLeftLeg();
+      elements[1].innerHTML = "&nbsp;";
       break;
     case 0:
-      showRightLeg();
+      elements[0].innerHTML = "&nbsp;";
       break;
     default:
-      showGallows();
+      break;
   }
 }
 
+// If the attempts reach 0 this function will be called in the function compareLetterOfWord;
 function unguessedWord() {
   if (attempts == 0) {
-    gameWarning.style.display = "flex";
-    gameWarning.innerHTML = `Tente novamente! Palavra certa: ${selectWord}.`;
+    alertPage.style.display = "flex";
+    alertPage.innerHTML = `Tente novamente! Palavra certa: ${selectWord}.`;
     document.querySelector(".keyboard").style.pointerEvents = "none"
 
     setTimeout(() => {
-      gameWarning.style.display = "none";
+      alertPage.style.display = "none";
     }, 4000);
   }
 }
 
+//If the word is guessed, this function will do a "FOR" to compare if the typed letters are the same as the letters of the right word;
 function guessedWord() {
   let wins = true;
 
@@ -80,12 +87,12 @@ function guessedWord() {
 
   if (wins == true) {
     attempts = 0;
-    gameWarning.style.display = "flex";
-    gameWarning.innerHTML = `Parabéns você adivinhou a palavra!`;
+    alertPage.style.display = "flex";
+    alertPage.innerHTML = `Parabéns você adivinhou a palavra!`;
     document.querySelector(".keyboard").style.pointerEvents = "none"
 
     setTimeout(() => {
-      gameWarning.style.display = "none";
+      alertPage.style.display = "none";
     }, 4000);
   }
 }
@@ -132,7 +139,6 @@ function accentedLetter(letter) {
   return exist;
 }
 
-// Essa função compara a letra da palavra caso a letra não exista será diminuido 1 de 6 tentativas e mostrando uma parte do boneco na forca, se a letra existir ela é adicionada na lista de letras;
 function compareLetterOfWord(letter) {
   let letterPosition = lettersWordList.indexOf(letter);
 
@@ -141,7 +147,7 @@ function compareLetterOfWord(letter) {
 
     if (accentedLetter(letter) == false) {
       attempts--;
-      showBoard();
+      gameAttempts();
       unguessedWord();
     }
   } else {
@@ -155,7 +161,6 @@ function compareLetterOfWord(letter) {
   }
 }
 
-// Essa função é chamada quando clicado em alguma tecla, então a letra é identificada e feita a comparação para ver se a letra está certa e se for certa será mostrada no campo;
 function identifiesLetter(letter) {
   document.getElementById("key-" + letter).disabled = true;
 
@@ -165,10 +170,9 @@ function identifiesLetter(letter) {
   }
 }
 
-// Chamando função ao carregar página para escolher uma palavra aleatória, mostrar quantos caracteres essa palavra tem e mostrar forca no canvas;
+// Call functions on page load;
 randomWord();
 showWord();
-showGallows();
 
 btnRestart.addEventListener("click", function () {
   window.location.reload(true);
@@ -179,11 +183,11 @@ window.addEventListener("keydown", function (e) {
 
   if (!attempts == 0) {
     if (!regEx.test(e.key)) {
-      gameWarning.style.display = "flex";
-      gameWarning.innerHTML = `Digite uma letra válida.`;
+      alertPage.style.display = "flex";
+      alertPage.innerHTML = `Digite uma letra válida.`;
 
       setTimeout(() => {
-        gameWarning.style.display = "none";
+        alertPage.style.display = "none";
       }, 4000);
     } else {
       identifiesLetter(e.key.toUpperCase());

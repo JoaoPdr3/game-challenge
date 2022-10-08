@@ -1,58 +1,82 @@
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 768px) {
   header {
     padding-left: 40px;
   }
-
-  header img {
-    width: 30px;
-  }
-
-  .content-game .keyboard {
-    width: 480px;
-  }
-
-  .keyboard .letter-btn {
-    width: 40px;
-  }
-
 }
 
+@media only screen and (max-width: 568px) {
+  .game-container .keyboard .btn-orig {
+    width: 40px;
+  }
+}
 
-@media only screen and (max-width: 699px) {
-  .content-game .keyboard {
-    width: 320px;
+@media only screen and (max-width: 458px) {
+  header {
+    padding-left: 20px;
   }
 
-  .keyboard .letter-btn {
-    width: 29px;
+  header img {
+    width: 42px;
+  }
+
+  .menu .btn {
+    font-size: 14px;
+  }
+
+  .game-container .keyboard .btn-orig {
+    width: 30px;
+    padding: 3px;
+  }
+
+  .game-container .keyboard .border-btn {
+    padding: 5px 1px;
+  }
+
+  .game-container .letter {
+    width: 38px;
+    font-size: 20px;
+  }
+
+  .game-container .fa-2xl {
+    font-size: 1.8em;
   }
 
   .buttons {
     flex-direction: column;
-    width: 250px;
+    max-width: 300px;
   }
 
+  .buttons .btn,
+  .buttons .btn-orig {
+    font-size: 14px;
+  }
+
+  .alert {
+    max-width: 300px;
+    font-size: 14px;
+  }
+
+  .word-container textarea {
+    font-size: 20px;
+  }
+
+  .word-container .info {
+    font-size: 14px;
+  }
 }
 
-@media only screen and (max-width: 599px) {
-  header {
-    padding-left: 25px;
+@media only screen and (max-width: 358px) {
+  .game-container .keyboard .btn-orig {
+    width: 26px;
+    padding: 1px;
   }
 
-  header img {
-    width: 28px;
+  .game-container .keyboard .border-btn {
+    padding: 3px 1px;
   }
 
-  .game-container {
-    width: 360px;
-  }
-
-  .text-container {
-    width: 350px;
-  }
-
-  .text-container div {
-    width: 100%;
+  .buttons {
     flex-direction: column;
+    max-width: 245px;
   }
 }

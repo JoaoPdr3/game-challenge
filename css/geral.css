@@ -21,7 +21,7 @@ header {
 main {
   margin: 35px auto;
   width: 90%;
-  height: 400px;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   flex-direction: column;

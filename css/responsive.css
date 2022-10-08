@@ -3,6 +3,10 @@
     padding-left: 40px;
   }
 
+  header img {
+    width: 30px;
+  }
+
   .content-game .keyboard {
     width: 480px;
   }
@@ -10,6 +14,7 @@
   .keyboard .letter-btn {
     width: 40px;
   }
+
 }
 
 
@@ -31,7 +36,11 @@
 
 @media only screen and (max-width: 599px) {
   header {
-    padding-left: 20px;
+    padding-left: 25px;
+  }
+
+  header img {
+    width: 28px;
   }
 
   .game-container {

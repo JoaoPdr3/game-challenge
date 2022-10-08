@@ -86,7 +86,7 @@
   transition: transform 200ms;
 }
 
-buttons .bg-btn:hover {
+.buttons .bg-btn:hover {
   transform: translateY(-5px);
   padding: 0;
 }
@@ -170,7 +170,6 @@ buttons .bg-btn:hover {
 }
 
 /* ||ADD-WORD */
-
 .word-container .field {
   max-width: 600px;
   margin: 0 auto;

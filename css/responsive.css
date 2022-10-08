@@ -1,0 +1,49 @@
+@media only screen and (max-width: 799px) {
+  header {
+    padding-left: 40px;
+  }
+
+  .content-game .keyboard {
+    width: 480px;
+  }
+
+  .keyboard .letter-btn {
+    width: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 699px) {
+  .content-game .keyboard {
+    width: 320px;
+  }
+
+  .keyboard .letter-btn {
+    width: 29px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 250px;
+  }
+
+}
+
+@media only screen and (max-width: 599px) {
+  header {
+    padding-left: 20px;
+  }
+
+  .game-container {
+    width: 360px;
+  }
+
+  .text-container {
+    width: 350px;
+  }
+
+  .text-container div {
+    width: 100%;
+    flex-direction: column;
+  }
+}

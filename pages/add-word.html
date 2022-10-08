@@ -16,24 +16,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <!-- *Scripts* -->
   <script src="../scripts/listWords.js" defer></script>
-  <script type="module" src="../scripts/addWord.js" defer></script>
+  <script src="../scripts/addWord.js" defer></script>
 </head>
 
 <body>
-  <span class="info-page"></span>
   <header>
     <a href="../index.html">
       <img src="../assets/logo-alura.svg" alt="Logo da Alura.">
     </a>
   </header>
   <main>
-    <div class="text-container">
-      <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Digite uma palavra"></textarea>
-      <span class="info">
-        <img src="../assets/info.svg" alt="Ícone de Informação.">
-        Máx. de 6 letras.
-      </span>
-      <div>
+    <span class="alert"></span>
+    <div class="word-container">
+      <div class="field">
+        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Digite uma palavra"></textarea>
+        <span class="info">
+          <img src="../assets/info.svg" alt="Ícone de Informação.">
+          Máx. de 5 letras.
+        </span>
+      </div>
+      <div class="buttons">
         <span class="border-btn">
           <button id="btn-add-word" class="btn-orig" type="button">Adicionar e Jogar</button>
         </span>

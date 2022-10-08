@@ -92,7 +92,8 @@
 
 .keyboard {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   margin: 20px auto;
   width: 700px;
@@ -106,7 +107,11 @@
 }
 
 .keyboard .btn-orig {
-  padding: 4px 0;
+  padding: 3px;
+}
+
+.keyboard .border-btn {
+  padding: 5px 1px;
 }
 
 .keyboard .letter-btn:disabled {

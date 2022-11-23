@@ -27,6 +27,22 @@ main {
   flex-direction: column;
 }
 
+footer {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+footer .copyright,
+footer .copyright a {
+  color: rgba(255, 255, 255, 0.603);
+}
+
+footer .copyright a:hover {
+  color: rgb(255, 133, 178);
+  text-decoration: underline;
+}
+
 a {
   text-decoration: none;
 }
